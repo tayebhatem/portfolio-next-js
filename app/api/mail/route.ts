@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     const email = formData.get('email')
     const message = formData.get('message')
     if(!email || !name ||  !message ) return Response.json({message:'Empty fields'})
-     sendMail(email,name,message)
+     await sendMail(email,name,message)
   
     return Response.json({ message:'Message has been sent sucessfully.' })
   }
