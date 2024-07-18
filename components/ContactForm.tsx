@@ -38,19 +38,12 @@ const form = useForm<z.infer<typeof mailSchema>>({
   })
   async function  onSubmit(values: z.infer<typeof mailSchema>) {
    
-    const formData = new FormData();
-    formData.append('name', values.name);
-    formData.append('email', values.email);
-    formData.append('message', values.message);
+  
    try {
-    const response = await axios.post('/api/mail', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    });
-   console.log(response.data.message)
+  await sendMail(values.email,values.name,values.message)
+  
     toast("Success", {
-        description: response.data.message,
+        description: 'Message has been sent sucessfully.',
        icon:<IoMdCheckmarkCircle className="text-pretty" size={20}/>,
     
       })
