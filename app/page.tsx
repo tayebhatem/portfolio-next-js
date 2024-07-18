@@ -18,9 +18,7 @@ export default function Home() {
   const router=useRouter()
   const [view, setView] = useState('all')
   const [projectsData, setprojectsData] = useState<Project[]>(projects)
-  const [imagesData, setimagesData] = useState(images)
-  const [skillsData, setskillsData] = useState(skills)
-  const [typesData, settypesData] = useState(types)
+ 
   const showCategory=(category:string)=>{
  if(category==='all'){
    setprojectsData(projects)
@@ -30,13 +28,7 @@ export default function Home() {
 setView(category)
   }
  
-  useEffect(() => {
-  console.log(skillsData)
-  console.log(projectsData)
-    return () => {
-      
-    }
-  }, [])
+  
   
   return (
    <>
@@ -51,7 +43,7 @@ setView(category)
    
      className="flex flex-col gap-y-2  items-center md:items-baseline text-center md:text-left  self-center">
     <h1 className="flex gap-x-2 text-left flex-row flex-wrap justify-center md:justify-start items-center   text-3xl xs:text-4xl      font-bold">
-      <div className="h-12 "> I'm a</div>
+      <div className="h-12 ">I&apos;m a</div>
 
       <div className=" h-12  overflow-hidden">
 
@@ -112,7 +104,7 @@ setView(category)
   <MotionDiv>
   <div className="my-8">
    <h1 className="font-bold text-3xl sm:text-4xl text-secondary-foreground/90  text-center">Technologes</h1>
-    <p className="text-muted-foreground text-center">Technologes i've been use for my projects</p>
+    <p className="text-muted-foreground text-center">Technologes i&apos;ve been use for my projects</p>
    </div>
   </MotionDiv>
 
@@ -125,7 +117,7 @@ setView(category)
     
     className="w-screen gap-x-3 flex justify-center items-center ">
       {
-        imagesData.map((image,index)=>(
+        images.map((image,index)=>(
           <img key={index} src={`/assets/${image}.png`}  className="w-16 h-16"/>
         ))
       }
@@ -250,7 +242,7 @@ Experienced computer science teacher offering courses in Python, web development
     </MotionDiv>
     <div className="space-y-4 mt-2 text-lg ">
     {
-        skillsData.map((skill,index)=>(
+        skills.map((skill,index)=>(
 
        <SkillItem skill={skill} key={index}/>
         ))
@@ -279,12 +271,12 @@ Experienced computer science teacher offering courses in Python, web development
    <MotionDiv>
    <div className="my-8 ">
    <h1 className="font-bold capitalize text-3xl sm:text-4xl text-secondary-foreground/90  text-center">projects</h1>
-    <p className="text-muted-foreground text-center">Projects that I've built recently</p>
+    <p className="text-muted-foreground text-center">Projects that I&apos;ve built recently</p>
     </div>
     <div className="flex flex-row justify-center w-full my-8">
   <div className="flex flex-row">
  {
-  typesData.map((item,index)=>(
+  types.map((item,index)=>(
     <button onClick={()=>showCategory(item)} key={index} className={`flex-1   text-base capitalize px-4 pb-2 border-b-2 ${item===view ? 'border-primary text-primary':' text-muted-foreground'}`}>
     {item}
    </button>
