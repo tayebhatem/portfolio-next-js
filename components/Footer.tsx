@@ -6,7 +6,7 @@ import { FaSquareUpwork } from 'react-icons/fa6'
 const Footer = () => {
   return (
     <footer className='flex flex-col gap-y-10 lg:max-w-5xl  mx-auto border-t py-10 justify-center items-center'>
-       <ul className='flex flex-row gap-x-4 '>
+       <ul className='flex flex-col justify-center items-center xs:flex-row gap-4 '>
         <li className='capitalize text-primary hover:underline'><Link href={'#home'}>home</Link></li>
         <li className='capitalize text-primary hover:underline'><Link href={'#technologies'}>technologies</Link></li>
         <li className='capitalize text-primary hover:underline'><Link href={'#about'}>about</Link></li>

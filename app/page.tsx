@@ -48,15 +48,15 @@ setView(category)
    initial={{opacity:0,x:-100}} animate={{ x: 0,opacity:1 } } whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}
    
      className="flex flex-col gap-y-2  items-center md:items-baseline text-center md:text-left  self-center">
-    <h1 className="flex gap-x-2 flex-row items-center text-2xl sm:text-4xl  font-bold">
-      <div className="h-12 align-middle"> I'm a</div>
+    <h1 className="flex gap-x-2 text-left flex-row flex-wrap justify-center md:justify-start items-center   text-3xl xs:text-4xl      font-bold">
+      <div className="h-12 "> I'm a</div>
 
-      <div className=" h-12 align-middle overflow-hidden">
+      <div className=" h-12  overflow-hidden">
 
         <motion.span  
         animate={{y:-48}}
         transition={{from:0, repeat: Infinity,repeatType: "mirror",repeatDelay:4,duration:0.8 }}
-      className="flex   flex-col items-center justify-center text-primary capitalize  ">
+      className="flex   flex-col  text-primary capitalize  ">
       <div className="h-12 ">web developer</div>
       <div className="h-12 ">mobile developer</div>
 
