@@ -12,8 +12,10 @@ import MotionDiv from "@/components/MotionDiv";
 import SkillItem from "@/components/SkillItem";
 import ContactForm from "@/components/ContactForm";
 import { FaSquareUpwork } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router=useRouter()
   const [view, setView] = useState('all')
   const [projectsData, setprojectsData] = useState<Project[]>(projects)
   const [imagesData, setimagesData] = useState(images)
@@ -69,7 +71,10 @@ setView(category)
     <p className="text-muted-foreground">
     I am a passionate and dedicated web and mobile developer creating dynamic and user-friendly digital solutions. My expertise lies in crafting responsive websites and intuitive mobile applications that not only meet the needs of users but also drive business success.
     </p>
-    <Button size={'lg'} className="text-lg flex items-center gap-2 capitalize text-white ">
+    <Button 
+    onClick={()=>router.push('/assets/cv.pdf')}
+    size={'lg'}  
+    className="text-lg flex items-center gap-2 capitalize text-white ">
       Download CV
       <Download className="text-white"/>
     </Button>
@@ -77,7 +82,7 @@ setView(category)
     <Link href='https://github.com/tayebhatem'>
     <FaGithub className="w-8 h-8 text-muted-foreground"/>
     </Link>
- <Link href={'https://www.linkedin.com/in/tayeb-hatem-3a2100156/'}>
+ <Link href={'https://www.linkedin.com/in/tayeb-hatem-3a2100156'}>
  <FaLinkedin className="w-8 h-8 text-muted-foreground"/>
  </Link>
  <Link href={'https://www.upwork.com/freelancers/~019526742efa60c32e'}>

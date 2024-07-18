@@ -11,8 +11,9 @@ import Main from "@/components/Main";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
+  title: "DevTech",
   description: "tayeb hatem portfolio",
+  icons:'/favicon.ico'
 };
 
 export default function RootLayout({
