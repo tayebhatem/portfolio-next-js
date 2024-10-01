@@ -31,15 +31,11 @@ const Footer = () => {
  </Link>
     </li>
 
- <li>
-    <Link href={'https://t.me/tayebhatem'}>
-    <FaTelegram className="w-6 h-6 text-muted-foreground"/>
-    </Link>
- </li>
+
        </ul>
 
        <p className='text-muted-foreground'>
-       © 2024 DzComerce All rights reserverd
+       © 2024 tayebhatem All rights reserverd
        </p>
     </footer>
   )

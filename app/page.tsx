@@ -80,7 +80,6 @@ setView(category)
  <Link href={'https://www.upwork.com/freelancers/~019526742efa60c32e'}>
  <FaSquareUpwork className="w-8 h-8 text-muted-foreground"/>
  </Link>
-  <FaTelegram className="w-8 h-8 text-muted-foreground"/>
   </div>
    </motion.div>
    <motion.div
@@ -193,7 +192,7 @@ setView(category)
  
   <div>
       <h2 className="font-medium text-xl ">Freelancer on Fiverr/Upwork</h2>
-      <h3 className="font-medium">2021-2024</h3>
+      <h3 className="font-medium">2022-2024</h3>
       <p className="text-muted-foreground">
       Experienced freelancer specializing in building responsive web and desktop applications. I also offer professional digital design services to create visually appealing and user-friendly interfaces. Dedicated to delivering high-quality solutions tailored to your needs.
       </p>
@@ -212,7 +211,7 @@ setView(category)
       <h3 className="font-medium">2023-2024</h3>
       <p className="text-muted-foreground">
        
-Experienced computer science teacher offering courses in Python, web development (HTML and CSS), and databases. Passionate about helping students grasp complex concepts and develop practical skills. Dedicated to delivering engaging and comprehensive lessons tailored to diverse learning needs.
+Experienced computer science teacher offering courses in Python, web development (HTML and CSS),Javascript, and databases. Passionate about helping students grasp complex concepts and develop practical skills. Dedicated to delivering engaging and comprehensive lessons tailored to diverse learning needs.
       </p>
     </div>
 

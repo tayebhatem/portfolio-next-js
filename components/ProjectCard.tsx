@@ -18,7 +18,7 @@ const ProjectCard = ({project}:{project:Project}) => {
    <MotionDiv>
      <div className="space-y-6 flex flex-col justify-center  " >
      <Link href={`/project/${project.slug}`} className="w-full h-80 flex justify-center items-center overflow-hidden border rounded-xl shadow-md">
-     <img src={project.thumnail} className="object-cover scale-[180%] hover:scale-[200%] transition-all"/>
+     <img src={project.thumnail} className="object-cover hover:scale-[150%] transition-all"/>
       </Link>
    <div>
   <div className="flex flex-row justify-between">
