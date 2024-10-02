@@ -11,7 +11,7 @@ import Main from "@/components/Main";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DevTech",
+  title: "tayeb hatem",
   description: "tayeb hatem portfolio",
   icons:'/favicon.ico'
 };

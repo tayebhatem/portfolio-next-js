@@ -5,7 +5,7 @@ export const projects:Project[]=[
     slug:'cridi',
     name:'Customer & Supplier Debt Management',
     description:"Cridi is a robust web application designed to simplify debt management for businesses dealing with customers and suppliers. Built with Next.js, Appwrite, Shadcn UI, Tailwind CSS, and React, the platform enables users to efficiently track debts, monitor payment delays, and generate detailed receipts for both debts and payments. Additionally, the app offers the capability to print customer and supplier cards with embedded QR codes for easy identification. A local subscription feature supports payments via Algeria's Edhahabia system, ensuring smooth transactions and seamless access to premium features.",
-    thumnail:'/assets/cridi.png',
+    thumnail:'/assets/cridi.PNG',
     github:'https://github.com/tayebhatem/credit-platfrom',
     url:'https://www.cridi.online',
     tools:[
