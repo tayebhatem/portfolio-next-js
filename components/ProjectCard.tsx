@@ -29,9 +29,11 @@ const ProjectCard = ({project}:{project:Project}) => {
       }
     </h1>
   <div className="flex flex-row gap-x-4">
-  <Link href={project.url}>
-   <FaLink className="w-6 h-6 text-primary"/>
-   </Link>
+ {
+  project.type==='web' &&  <Link href={project.url}>
+  <FaLink className="w-6 h-6 text-primary"/>
+  </Link>
+ }
    <Link href={project.github}>
    <FaGithub className="w-6 h-6 text-primary"/>
    </Link>
