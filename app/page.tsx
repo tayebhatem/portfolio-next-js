@@ -11,9 +11,14 @@ import ProjectCard, { Project } from "@/components/ProjectCard";
 import MotionDiv from "@/components/MotionDiv";
 import SkillItem from "@/components/SkillItem";
 import ContactForm from "@/components/ContactForm";
-import { FaSquareUpwork } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
-
+import { SocialMediaList } from "@/components/custome-ui/SocialMediaList";
+import WordRotate from "@/components/ui/word-rotate";
+import { Technologies } from "@/components/custome-ui/Technologies";
+import { Tools } from "@/components/custome-ui/Tools";
+import { cn } from "@/lib/utils";
+import { Hero } from "@/components/custome-ui/Hero";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 export default function Home() {
   const router=useRouter()
   const [view, setView] = useState('all')
@@ -36,28 +41,29 @@ setView(category)
       className="space-y-8 my-16"
     id="home"
     >
-
+    <AnimatedGridPattern
+        numSquares={30}
+        maxOpacity={0.1}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[150%] skew-y-12",
+        )}
+      />
       <div className="grid grid-cols-1 gap-6 items-center justify-center  md:grid-cols-2 ">
+     
 <motion.div 
    initial={{opacity:0,x:-100}} animate={{ x: 0,opacity:1 } } whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}
    
      className="flex flex-col gap-y-2  items-center md:items-baseline text-center md:text-left  self-center">
     <h1 className="flex gap-x-2 text-left flex-row flex-wrap justify-center md:justify-start items-center   text-3xl xs:text-4xl      font-bold">
-      <div className="h-12 ">I&apos;m a</div>
+      <div className="text-primary">I&apos;m a</div>
 
-      <div className=" h-12  overflow-hidden">
-
-        <motion.span  
-        animate={{y:-48}}
-        transition={{from:0, repeat: Infinity,repeatType: "mirror",repeatDelay:4,duration:0.8 }}
-      className="flex   flex-col  text-primary capitalize  ">
-      <div className="h-12 ">web developer</div>
-      <div className="h-12 ">mobile developer</div>
-
-      </motion.span>
-
-
-      </div>
+      <WordRotate
+      className="font-bold text-black dark:text-white capitalize"
+      words={["web developer", "mobile developer"]}
+    />
       
     </h1>
     <p className="text-muted-foreground">
@@ -70,24 +76,14 @@ setView(category)
       Download CV
       <Download className="text-white"/>
     </Button>
-  <div className="flex gap-4 my-2 ">
-    <Link href='https://github.com/tayebhatem'>
-    <FaGithub className="w-8 h-8 text-muted-foreground"/>
-    </Link>
- <Link href={'https://www.linkedin.com/in/tayeb-hatem-3a2100156'}>
- <FaLinkedin className="w-8 h-8 text-muted-foreground"/>
- </Link>
- <Link href={'https://www.upwork.com/freelancers/~019526742efa60c32e'}>
- <FaSquareUpwork className="w-8 h-8 text-muted-foreground"/>
- </Link>
-  </div>
+  <SocialMediaList/>
    </motion.div>
+
    <motion.div
    initial={{opacity:0,x:100}} animate={{ x: 0,opacity:1 } } whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
     className="flex justify-center order-first md:order-last">
-   <div className="rounded-full overflow-hidden h-64 w-64 md:w-80 md:h-80  border-8 border-primary   " >
-    <img src="/assets/profile.jpg" className="object-contain object-center"/>
-   </div>
+
+  <Hero/>
 
    </motion.div>
       </div>
@@ -110,18 +106,7 @@ setView(category)
    
 
   <MotionDiv>
-  <motion.div
-    animate={{x:-460}}
-    transition={{from:0, repeat: Infinity,repeatType: "reverse", duration: 10 }}
-    
-    className="w-screen gap-x-3 flex justify-center items-center ">
-      {
-        images.map((image,index)=>(
-          <img key={index} src={`/assets/${image}.png`}  className="w-16 h-16"/>
-        ))
-      }
-
-   </motion.div>
+ <Technologies/>
   </MotionDiv>
 
    
@@ -292,7 +277,7 @@ Experienced computer science teacher offering courses in Python, web development
 
   
 
-   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6  ">
+   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 px-8  ">
    {
   projectsData.map((item)=>(
    <ProjectCard project={item} key={item.slug}/>
@@ -315,10 +300,10 @@ Experienced computer science teacher offering courses in Python, web development
    </div>
   </MotionDiv>
 
- <div className="grid md:grid-cols-2">
+ <div className="grid md:grid-cols-2 items-center">
  <ContactForm/>
  <MotionDiv>
- <img src="/assets/mail.svg" className=""/>
+ <Tools/>
  </MotionDiv>
  </div>
     </section>
