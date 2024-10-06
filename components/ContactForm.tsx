@@ -1,7 +1,7 @@
 "use client"
 
 import { z } from "zod"
-import React from 'react'
+import React, { useTransition } from 'react'
 import MotionDiv from './MotionDiv'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -27,7 +27,7 @@ import axios from 'axios'
 
 const ContactForm = () => {
    
-
+const [loading,sendMessage]=useTransition()
 const form = useForm<z.infer<typeof mailSchema>>({
     resolver: zodResolver(mailSchema),
     defaultValues: {
@@ -38,18 +38,20 @@ const form = useForm<z.infer<typeof mailSchema>>({
   })
   async function  onSubmit(values: z.infer<typeof mailSchema>) {
    
-  
-   try {
-  await sendMail(values.email,values.name,values.message)
-  
-    toast("Success", {
-        description: 'Message has been sent sucessfully.',
-       icon:<IoMdCheckmarkCircle className="text-pretty" size={20}/>,
-    
-      })
-   } catch (error) {
-    console.log(error)
-   }
+    sendMessage(async()=>{
+  const {email,message,name}=values
+  try {
+ await sendMail(email,name,message)
+ 
+   toast("Success", {
+       description: 'Message has been sent sucessfully.',
+      icon:<IoMdCheckmarkCircle className="text-primary" size={20}/>,
+   
+     })
+  } catch (error) {
+   console.log(error)
+  }
+})
    
   }
 
@@ -99,7 +101,7 @@ const form = useForm<z.infer<typeof mailSchema>>({
             
           )}
         />
-        <Button type="submit" className="py-4 px-4 flex items-center gap-4 text-base capitalize text-white">
+        <Button type="submit" className="py-4 px-4 flex items-center gap-4 text-base capitalize text-white" disabled={loading}>
         send
             <BsSendFill  />
             </Button>

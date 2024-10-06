@@ -38,7 +38,16 @@ const ProjectCard = ({project}:{project:Project}) => {
     <p className='text-muted-foreground text-sm  h-16   py-2 overflow-hidden'>
   {project.description}
 </p>
-
+<div className='flex flex-row gap-2 flex-wrap py-2'>
+         {
+          project?.tools.map((item,index)=>(
+            <div className='bg-black dark:bg-muted text-white dark:text-white text-nowrap text-sm rounded-full px-3 py-1 font-medium capitalize' key={index}>
+            {item}
+            </div>
+          ))
+         }
+        
+        </div>
     <div className="flex flex-row gap-x-4 justify-end py-2">
  {
   project.type==='web' &&  <Link href={project.url}>

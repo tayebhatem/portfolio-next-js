@@ -1,22 +1,26 @@
+'use client'
+
 import React from "react";
 import { Dock,DockIcon } from "../ui/dock";
+import { useRouter } from "next/navigation";
 
 
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export function SocialMediaList() {
+    const router=useRouter()
   return (
     <div className="relative">
       <Dock direction="middle">
-        <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
-          <Icons.gitHub className="size-full" />
+        <DockIcon className="bg-black/10 dark:bg-white/10 p-3" >
+          <Icons.gitHub className="size-full" onClick={()=>router.push('https://github.com/tayebhatem')} />
         </DockIcon>
         <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
-          <Icons.upWork className="size-full" />
+          <Icons.upWork className="size-full"  onClick={()=>router.push('https://www.linkedin.com/in/tayeb-hatem-3a2100156/')}/>
         </DockIcon>
         <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
-          <Icons.linkedIn className="size-full" />
+          <Icons.linkedIn className="size-full"  onClick={()=>router.push('https://www.upwork.com/freelancers/~019526742efa60c32e')}/>
         </DockIcon>
       
       </Dock>

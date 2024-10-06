@@ -44,6 +44,7 @@ export const projects:Project[]=[
       'next js',
       'tailwind',
       'clerk',
+      'mongodb',
     ],
     type:'web'
   },
@@ -78,6 +79,7 @@ export const projects:Project[]=[
         'react',
         'next js',
         'tailwind',
+        'mailJs',
       ],
       type:'web'
     },
@@ -123,7 +125,6 @@ export const projects:Project[]=[
       tools:[
         'react native',
         'expo go',
-        'next js',
         'tailwind',
         'supabase',
       ],

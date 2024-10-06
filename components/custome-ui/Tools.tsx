@@ -22,7 +22,6 @@ const slugs = [
   "mongodb",
   "postgresql",
   "firebase",
-  
   "appwrite",
   "tailwind",
   "vercel",

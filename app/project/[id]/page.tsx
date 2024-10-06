@@ -20,7 +20,7 @@ const ProjectPage = ({params}:{params:{id:string}}) => {
         <div className='flex flex-row gap-2 flex-wrap'>
          {
           project?.tools.map((item,index)=>(
-            <div className='bg-primary  text-nowrap rounded-full px-3 py-1 text-white font-medium capitalize' key={index}>
+            <div className='bg-muted text-nowrap text-sm rounded-full px-3 py-1 font-medium capitalize' key={index}>
             {item}
             </div>
           ))
