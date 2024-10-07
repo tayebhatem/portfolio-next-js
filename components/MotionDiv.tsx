@@ -17,6 +17,7 @@ const MotionDiv = ({children}:{children:ReactNode}) => {
     }
   return (
     <motion.div
+    layout
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true, amount: 0.8 }}
