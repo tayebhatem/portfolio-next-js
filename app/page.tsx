@@ -56,8 +56,8 @@ setView(category)
 <motion.div 
    initial={{opacity:0,x:-100}} animate={{ x: 0,opacity:1 } } whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}
    
-     className="flex flex-col gap-y-2  items-center md:items-baseline text-center md:text-left  self-center">
-    <h1 className="flex flex-row flex-wrap items-center justify-center text-3xl  gap-x-2  font-bold">
+     className="flex flex-col gap-y-4  items-center md:items-baseline text-center md:text-left  self-center">
+    <h1 className="flex flex-col justify-center md:flex-row flex-wrap items-center text-3xl lg:text-4xl  gap-x-2  font-bold">
       <h1 className="text-primary">I&apos;m a</h1>
 
       <WordRotate
@@ -66,9 +66,11 @@ setView(category)
     />
       
     </h1>
-    <p className="text-muted-foreground">
+
+    <p className="text-muted-foreground text-sm">
     I am a passionate and dedicated web and mobile developer creating dynamic and user-friendly digital solutions. My expertise lies in crafting responsive websites and intuitive mobile applications that not only meet the needs of users but also drive business success.
     </p>
+
     <Button 
     onClick={()=>router.push('/assets/cv.pdf')}
     size={'lg'}  
@@ -76,7 +78,9 @@ setView(category)
       Download CV
       <Download className="text-white"/>
     </Button>
+
   <SocialMediaList/>
+
    </motion.div>
 
    <motion.div

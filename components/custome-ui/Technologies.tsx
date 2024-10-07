@@ -1,6 +1,6 @@
 
 import Marquee from "@/components/ui/marquee";
-import { images } from "@/constants/data";
+
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 const technologies=[
@@ -131,14 +131,14 @@ const secondRow = technologies.slice(technologies.length / 2);
       <Marquee pauseOnHover className="[--duration:20s]">
       {
           firstRow.map((item)=>(
-          <item.svg key={item.key} className="w-16"/>
+          <item.svg key={item.key} className="w-14"/>
           ))
         }
       </Marquee>
       <Marquee pauseOnHover reverse className="[--duration:20s]">
       {
           secondRow.map((item)=>(
-          <item.svg key={item.key} className="w-16"/>
+          <item.svg key={item.key} className="w-14"/>
           ))
         }
       </Marquee>
