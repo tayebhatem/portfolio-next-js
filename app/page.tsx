@@ -57,11 +57,11 @@ setView(category)
    initial={{opacity:0,x:-100}} animate={{ x: 0,opacity:1 } } whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}
    
      className="flex flex-col gap-y-2  items-center md:items-baseline text-center md:text-left  self-center">
-    <h1 className="flex gap-x-2 text-left flex-row flex-wrap justify-center md:justify-start items-center   text-3xl xs:text-4xl      font-bold">
-      <div className="text-primary">I&apos;m a</div>
+    <h1 className="flex flex-row flex-wrap items-center justify-center text-3xl  gap-x-2  font-bold">
+      <h1 className="text-primary">I&apos;m a</h1>
 
       <WordRotate
-      className="font-bold text-black dark:text-white capitalize"
+      className="font-bold text-black dark:text-white capitalize w-full"
       words={["web developer", "mobile developer"]}
     />
       
