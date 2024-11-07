@@ -20,8 +20,7 @@ import { Tools } from "@/components/custome-ui/Tools";
 
 export default function Home() {
   const router = useRouter();
-  const [view, setView] = useState('all');
-  
+ 
   return (
     <>
       <section className="space-y-8 my-16" id="home">
@@ -44,7 +43,7 @@ export default function Home() {
             className="flex flex-col gap-y-4 items-center md:items-baseline text-center md:text-left self-center"
           >
             <h1 className="flex flex-col justify-center md:flex-row flex-wrap items-center text-3xl lg:text-4xl gap-x-2 font-bold">
-              <span className="text-primary">I'm a</span>
+              <span className="text-primary">I&apos;m a</span>
               <WordRotate
                 className="font-bold text-black dark:text-white capitalize w-full"
                 words={["web developer", "mobile developer"]}
@@ -81,7 +80,7 @@ export default function Home() {
         <MotionDiv>
           <div className="my-8">
             <h1 className="font-bold text-3xl sm:text-4xl text-secondary-foreground/90 text-center">Technologies</h1>
-            <p className="text-muted-foreground text-center">Technologies I've used in my projects</p>
+            <p className="text-muted-foreground text-center">Technologies I&apos;ve used in my projects</p>
           </div>
         </MotionDiv>
 
@@ -107,7 +106,7 @@ export default function Home() {
                                after:content-[''] after:absolute after:-left-0.5 after:top-4 after:w-1.5 after:h-full after:bg-primary">
                 </div>
                 <div>
-                  <h2 className="font-medium text-xl">Bachelor's degree in Computer Science</h2>
+                  <h2 className="font-medium text-xl">Bachelor&apos;s degree in Computer Science</h2>
                   <h3 className="font-medium">2016-2017</h3>
                   <p className="italic text-muted-foreground">USTHB - Algiers</p>
                   <h3 className="font-medium">2017-2020</h3>
@@ -119,7 +118,7 @@ export default function Home() {
                 <div className="before:content-[''] before:-left-1.5 before:absolute before:rounded-full before:w-4 before:h-4 before:bg-primary">
                 </div>
                 <div>
-                  <h2 className="font-medium text-xl">Master's degree in Software Engineering</h2>
+                  <h2 className="font-medium text-xl">Master&apos;s degree in Software Engineering</h2>
                   <h3 className="font-medium">2020-2022</h3>
                   <p className="italic text-muted-foreground">Ibn Khaldun - Tiaret</p>
                 </div>
@@ -172,7 +171,7 @@ export default function Home() {
         <MotionDiv>
           <div className="my-8">
             <h1 className="font-bold capitalize text-3xl sm:text-4xl text-secondary-foreground/90 text-center">Projects</h1>
-            <p className="text-muted-foreground text-center">Projects I've built recently</p>
+            <p className="text-muted-foreground text-center">Projects I&apos;ve built recently</p>
           </div>
         </MotionDiv>
         <ProjectList />
