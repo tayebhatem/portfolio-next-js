@@ -5,17 +5,9 @@ import { FaGithub, FaLink } from 'react-icons/fa';
 import MotionDiv from './MotionDiv';
 import { MagicCard } from './ui/magic-card';
 import { useTheme } from 'next-themes';
-export interface Project{
-    slug:string,
-    name:string;
-    description:string;
-    thumnail:string;
-    github:string;
-    url:string;
-    tools:string[];
-    type:'web'|'mobile';
-}
-const ProjectCard = ({project}:{project:Project}) => {
+import { ProjectType } from '@/types';
+
+const ProjectCard = ({project}:{project:ProjectType}) => {
   const { theme } = useTheme();
   return (
    <MotionDiv>
@@ -26,7 +18,7 @@ const ProjectCard = ({project}:{project:Project}) => {
       >
   
   <Link href={`/project/${project.slug}`}  className=' flex pt-6 justify-center  px-4  h-52 bg-gradient-to-r from-indigo-500 via-purple-500   to-pink-500  overflow-hidden'>
-  <img src={project.thumnail} className="object-cover  transition-all hover:scale-110 rounded-t-md"/>
+  <img src={project.thumbnail} className="object-cover  transition-all hover:scale-110 rounded-t-md"/>
   </Link>
   
  <div className='p-3 space-y-2'>
@@ -49,11 +41,9 @@ const ProjectCard = ({project}:{project:Project}) => {
         
         </div>
     <div className="flex flex-row gap-x-4 justify-end py-2">
- {
-  project.type==='web' &&  <Link href={project.url}>
+    <Link href={project.website}>
   <FaLink className="w-5 h-5 text-primary"/>
   </Link>
- }
    <Link href={project.github}>
    <FaGithub className="w-5 h-5 text-primary"/>
    </Link>

@@ -1,13 +1,15 @@
-import { Project } from "@/components/ProjectCard"
+import { ProjectType } from "@/types";
 
-export const projects:Project[]=[
+
+
+export const projects:ProjectType[]=[
   {
     slug:'cridi',
     name:'Debts Management System',
     description:"Cridi is a robust web application designed to simplify debt management for businesses dealing with customers and suppliers. Built with Next.js, Appwrite, Shadcn UI, Tailwind CSS, and React, the platform enables users to efficiently track debts, monitor payment delays, and generate detailed receipts for both debts and payments. Additionally, the app offers the capability to print customer and supplier cards with embedded QR codes for easy identification. A local subscription feature supports payments via Algeria's Edhahabia system, ensuring smooth transactions and seamless access to premium features.",
-    thumnail:'/assets/cridi.PNG',
+    thumbnail:'/assets/cridi.PNG',
     github:'https://github.com/tayebhatem/credit-platfrom',
-    url:'https://www.cridi.online',
+    website:'https://www.cridi.online',
     tools:[
       'react',
       'next js',
@@ -21,9 +23,9 @@ export const projects:Project[]=[
     slug:'webcam-meeting',
     name:'WebCam Meeting',
     description:'This innovative webcam meeting website, built with Next.js, React, and styled using Tailwind CSS, leverages Clerk for authentication and GetStream.io for real-time communication. The platform allows users to effortlessly set up online webcam meetings and share the meeting links with others to join. With secure authentication and a user-friendly interface, this system ensures a seamless and interactive online meeting experience across all devices.',
-    thumnail:'/assets/meet.PNG',
+    thumbnail:'/assets/meet.PNG',
     github:'https://github.com/tayebhatem/vedio-chat-with-next-js',
-    url:'https://meet-opal.vercel.app/sign-in',
+    website:'https://meet-opal.vercel.app/sign-in',
     tools:[
       'react',
       'next js',
@@ -33,12 +35,28 @@ export const projects:Project[]=[
     type:'web'
   },
   {
+    slug:'e-comrece',
+    name:'Ecomere website',
+    description:'E-commerce platform, built with Next.js, styled using Tailwind CSS, and powered by Sanity for content management, offers a seamless shopping experience. Users can browse through a dynamic catalog of products, add items to their cart, and proceed through a secure checkout process that supports payments via Edhahabia card. With a responsive design optimized for all devices, our website ensures a smooth and intuitive experience on desktops, tablets, and smartphones.',
+    thumbnail:'/assets/dzcomerce.PNG',
+    github:'https://github.com/tayebhatem/ecomerce-website',
+    website:'https://dz-comerce.vercel.app',
+    tools:[
+      'react',
+      'next js',
+      'tailwind',
+      'sanity',
+    ],
+    type:'web'
+
+  },
+  {
     slug:'ai-image',
     name:'Ai Image',
     description:'This AI-powered image editing website, built with Next.js, React, and styled using Tailwind CSS, utilizes Clerk for authentication and Cloudinary for image processing. Users can remove backgrounds, eliminate objects, and change image ratios with ease. The platform offers a subscription model, allowing users to purchase points for additional image editing and generation using the Edhahabia card. This comprehensive tool ensures a seamless and efficient image editing experience for all users.',
-    thumnail:'/assets/imageai.PNG',
+    thumbnail:'/assets/imageai.PNG',
     github:'https://github.com/tayebhatem/ecomerce-website',
-    url:'https://image-ai-delta.vercel.app',
+    website:'https://image-ai-delta.vercel.app',
     tools:[
       'react',
       'next js',
@@ -53,9 +71,9 @@ export const projects:Project[]=[
       slug:'auth-js-system',
       name:'Auth js System',
       description:'This advanced authentication system website, built with Next.js and styled using Tailwind CSS, leverages React, Prisma, and PostgreSQL for robust functionality. Utilizing Auth.js v5, the platform offers secure user authentication with support for Google and GitHub logins. It includes features such as email account confirmation with token verification, two-factor authentication (2FA), and a secure password reset process using tokens. This comprehensive system ensures a reliable and secure user authentication experience across all devices.',
-      thumnail:'/assets/authsystem.PNG',
+      thumbnail:'/assets/authsystem.PNG',
       github:'https://github.com/tayebhatem/next-js-auth-system',
-      url:'https://next-js-auth-system-beryl.vercel.app/auth/login',
+      website:'https://next-js-auth-system-beryl.vercel.app/auth/login',
       tools:[
         'react',
         'next js',
@@ -72,9 +90,9 @@ export const projects:Project[]=[
       slug:'language-instittue',
       name:'Language institute',
       description:'This responsive language institute website, built with Next.js, React, and styled using Tailwind CSS, offers a seamless and user-friendly experience. Prospective students can easily submit their application for a language course, and an email will be sent with detailed information about the selected language. This platform ensures efficient communication and provides a modern, accessible way to explore and enroll in language courses.',
-      thumnail:'/assets/languageinstitute.PNG',
+      thumbnail:'/assets/languageinstitute.PNG',
       github:'https://github.com/tayebhatem/language-institute-next-js',
-      url:'https://amslay.netlify.app',
+      website:'https://amslay.netlify.app',
       tools:[
         'react',
         'next js',
@@ -83,53 +101,25 @@ export const projects:Project[]=[
       ],
       type:'web'
     },
+   
     {
-      slug:'school-management',
-      name:'School Management',
-      description:'This comprehensive school management website, built with Next.js, React, and styled using Tailwind CSS, leverages Supabase for robust backend functionality. Schools can sign up and manage their operations efficiently, with features to add or import students, add teachers, create schedules, and link teachers to classes. The platform also generates QR codes for each student, enabling easy attendance tracking through a mobile app. Additionally, teachers can view important announcements posted on the platform, ensuring smooth communication and streamlined school management.',
-      thumnail:'/assets/schoolmanagement.PNG',
-      github:'https://github.com/tayebhatem/madrassa-platfrom',
-      url:'https://kateb-yacine.netlify.app',
-      tools:[
-        'react',
-        'next js',
-        'tailwind',
-        'supabase',
-      ],
-      type:'web'
-    },
-    {
-      slug:'e-comrece',
-      name:'Ecomere website',
-      description:'E-commerce platform, built with Next.js, styled using Tailwind CSS, and powered by Sanity for content management, offers a seamless shopping experience. Users can browse through a dynamic catalog of products, add items to their cart, and proceed through a secure checkout process that supports payments via Edhahabia card. With a responsive design optimized for all devices, our website ensures a smooth and intuitive experience on desktops, tablets, and smartphones.',
-      thumnail:'/assets/dzcomerce.PNG',
-      github:'https://github.com/tayebhatem/ecomerce-website',
-      url:'https://dz-comerce.vercel.app',
-      tools:[
-        'react',
-        'next js',
-        'tailwind',
-        'sanity',
-      ],
-      type:'web'
-
-    },
-
-    {
-      slug:'school-management-app',
-      name:'School Management App',
-      description:'The accompanying mobile app, built with React Native and Expo Go, integrates seamlessly with our school management system powered by Supabase. Teachers can log in to their accounts, where they can create classes, scan students QR codes for attendance tracking, and access announcements posted by the school platform. This app ensures efficient classroom management and facilitates easy communication between teachers and students. With a user-friendly interface and real-time updates, it enhances the overall educational experience within the institution.',
-      thumnail:'/assets/school management app.jpg',
-      github:'https://github.com/tayebhatem/madrassa-app',
-      url:'https://kateb-yacine.netlify.app',
-      tools:[
+      slug: 'cridi-mobile',
+      name: 'Cridi Mobile ',
+      description: "The Cridi Mobile App is designed for customers and suppliers to track their debts and payments on the go. Built with React Native and Expo, the app leverages Appwrite and Firebase for seamless real-time data synchronization and push notifications. Users can view detailed payment histories, receive instant push notifications for new debts, payments, and messages from stores, and communicate directly with stores through in-app chat. This mobile companion to the Cridi web platform offers a convenient and user-friendly way for customers and suppliers to stay updated on their financial interactions.",
+      thumbnail: '/assets/cridi-mobile.jpg',
+      github: 'https://github.com/tayebhatem/cridi-app',
+      website: 'https://play.google.com/store/apps/details?id=com.tayebhatem.cridi', 
+      tools: [
         'react native',
-        'expo go',
-        'tailwind',
-        'supabase',
+        'expo',
+        'appwrite',
+        'firebase'
       ],
-      type:'mobile'
-    },
+      type: 'mobile'
+    }
+    
+
+    
   ]
   export const types=[
     'all',
