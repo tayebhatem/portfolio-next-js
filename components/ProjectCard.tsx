@@ -12,7 +12,7 @@ const ProjectCard = ({project}:{project:ProjectType}) => {
   return (
    <MotionDiv>
      <MagicCard
-        className="cursor-pointer flex-col items-center justify-center shadow-2xl  "
+        className="cursor-pointer flex-col items-center justify-center shadow-2xl   "
         gradientColor={theme === "dark" ? "#262626" : "#D9D9D955"}
       
       >
@@ -30,7 +30,8 @@ const ProjectCard = ({project}:{project:ProjectType}) => {
     <p className='text-muted-foreground text-sm  h-16   py-2 overflow-hidden'>
   {project.description}
 </p>
-<div className='flex flex-row gap-2 flex-wrap py-2'>
+<div className='h-20'>
+<div className='flex flex-row gap-2 flex-wrap py-2  items-start'>
          {
           project?.tools.map((item,index)=>(
             <div className='bg-black dark:bg-muted text-white dark:text-white text-nowrap text-sm rounded-full px-3 py-1 font-medium capitalize' key={index}>
@@ -40,6 +41,7 @@ const ProjectCard = ({project}:{project:ProjectType}) => {
          }
         
         </div>
+</div>
     <div className="flex flex-row gap-x-4 justify-end py-2">
     <Link href={project.website}>
   <FaLink className="w-5 h-5 text-primary"/>

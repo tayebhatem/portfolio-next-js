@@ -20,19 +20,19 @@ export const projects:ProjectType[]=[
 
   },
   {
-    slug:'webcam-meeting',
-    name:'WebCam Meeting',
-    description:'This innovative webcam meeting website, built with Next.js, React, and styled using Tailwind CSS, leverages Clerk for authentication and GetStream.io for real-time communication. The platform allows users to effortlessly set up online webcam meetings and share the meeting links with others to join. With secure authentication and a user-friendly interface, this system ensures a seamless and interactive online meeting experience across all devices.',
-    thumbnail:'/assets/meet.PNG',
-    github:'https://github.com/tayebhatem/vedio-chat-with-next-js',
-    website:'https://meet-opal.vercel.app/sign-in',
-    tools:[
-      'react',
-      'next js',
-      'tailwind',
-      'Clerk',
+    slug: 'cridi-mobile',
+    name: 'Cridi Mobile ',
+    description: "The Cridi Mobile App is designed for customers and suppliers to track their debts and payments on the go. Built with React Native and Expo, the app leverages Appwrite and Firebase for seamless real-time data synchronization and push notifications. Users can view detailed payment histories, receive instant push notifications for new debts, payments, and messages from stores, and communicate directly with stores through in-app chat. This mobile companion to the Cridi web platform offers a convenient and user-friendly way for customers and suppliers to stay updated on their financial interactions.",
+    thumbnail: '/assets/cridi-mobile.jpg',
+    github: 'https://github.com/tayebhatem/cridi-app',
+    website: 'https://play.google.com/store/apps/details?id=com.tayebhatem.cridi', 
+    tools: [
+      'react native',
+      'expo',
+      'appwrite',
+      'firebase'
     ],
-    type:'web'
+    type: 'mobile'
   },
   {
     slug:'e-comrece',
@@ -49,6 +49,37 @@ export const projects:ProjectType[]=[
     ],
     type:'web'
 
+  },
+  {
+    slug: 'personal-portfolio',
+    name: 'Personal Portfolio',
+    description: "This is a modern, responsive personal portfolio website showcasing projects, skills, and experience. Built with Next.js, React, and styled using Tailwind CSS, the portfolio highlights work through project galleries, interactive components, and smooth animations. With SEO optimization and fast loading speeds, this portfolio offers an engaging and professional online presence to connect with potential clients, collaborators, and employers.",
+    thumbnail: '/assets/portfolio.PNG', // Update with actual thumbnail path
+    github: 'https://github.com/tayebhatem/portfolio-next-js',
+    website: 'https://tayebhatem.vercel.app', // Replace with actual portfolio URL
+    tools: [
+      'react',
+      'next js',
+      'tailwind'
+    ],
+    type: 'web'
+  },
+  
+ 
+  {
+    slug:'webcam-meeting',
+    name:'WebCam Meeting',
+    description:'This innovative webcam meeting website, built with Next.js, React, and styled using Tailwind CSS, leverages Clerk for authentication and GetStream.io for real-time communication. The platform allows users to effortlessly set up online webcam meetings and share the meeting links with others to join. With secure authentication and a user-friendly interface, this system ensures a seamless and interactive online meeting experience across all devices.',
+    thumbnail:'/assets/meet.PNG',
+    github:'https://github.com/tayebhatem/vedio-chat-with-next-js',
+    website:'https://meet-opal.vercel.app/sign-in',
+    tools:[
+      'react',
+      'next js',
+      'tailwind',
+      'Clerk',
+    ],
+    type:'web'
   },
   {
     slug:'ai-image',
@@ -97,26 +128,12 @@ export const projects:ProjectType[]=[
         'react',
         'next js',
         'tailwind',
-        'mailJs',
+       
       ],
       type:'web'
     },
    
-    {
-      slug: 'cridi-mobile',
-      name: 'Cridi Mobile ',
-      description: "The Cridi Mobile App is designed for customers and suppliers to track their debts and payments on the go. Built with React Native and Expo, the app leverages Appwrite and Firebase for seamless real-time data synchronization and push notifications. Users can view detailed payment histories, receive instant push notifications for new debts, payments, and messages from stores, and communicate directly with stores through in-app chat. This mobile companion to the Cridi web platform offers a convenient and user-friendly way for customers and suppliers to stay updated on their financial interactions.",
-      thumbnail: '/assets/cridi-mobile.jpg',
-      github: 'https://github.com/tayebhatem/cridi-app',
-      website: 'https://play.google.com/store/apps/details?id=com.tayebhatem.cridi', 
-      tools: [
-        'react native',
-        'expo',
-        'appwrite',
-        'firebase'
-      ],
-      type: 'mobile'
-    }
+   
     
 
     
@@ -153,12 +170,12 @@ export const projects:ProjectType[]=[
   'Building robust and scalable web applications using the latest technologies such as HTML, CSS,SASS,Tailwind,TypeScript, JavaScript, React, Redux,Zustand,Next js,Vite.',
   ' Creating seamless and high-performance mobile apps for both Android and iOS platforms with  React Native,Expo Go.',
   'Designing engaging and accessible interfaces that provide excellent user experiences. Proficient in using tools like Figma and Adobe Illustrator to create visually appealing and user-friendly designs.',
-  'Developing secure and efficient backends with Node.js, PHP,Python,Java',
+  'Developing secure and efficient backends with Node.js,Python,Java',
   'Implementing and managing databases using MySQL, PostgreSQL, MongoDB, Prisma, and Supabase.',
   'Utilizing efficient data structures and algorithms to solve complex problems and optimize performance.',
   'Demonstrating strong analytical and problem-solving skills to overcome challenges and deliver effective solutions.',
   'Building robust and scalable RESTful APIs and GraphQL endpoints to support web and mobile applications.',
   'Implementing secure authentication methods using the latest technologies like Auth.js and JWT tokens.',
   'Extracting data from websites efficiently using APIs and tools like Python Selenium.',
-  'Proficient in using Git and GitHub for version control, ensuring project integrity, collaboration, and seamless integration of new features.',
+  'Proficient in using Git and GitHub for version control, ensuring project integrity, and seamless integration of new features.',
   ]
