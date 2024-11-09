@@ -6,7 +6,7 @@ import MotionDiv from './MotionDiv';
 import { MagicCard } from './ui/magic-card';
 import { useTheme } from 'next-themes';
 import { ProjectType } from '@/types';
-
+import { IoLogoGooglePlaystore } from "react-icons/io5";
 const ProjectCard = ({project}:{project:ProjectType}) => {
   const { theme } = useTheme();
   return (
@@ -44,10 +44,10 @@ const ProjectCard = ({project}:{project:ProjectType}) => {
 </div>
     <div className="flex flex-row gap-x-4 justify-end py-2">
     <Link href={project.website}>
-  <FaLink className="w-5 h-5 text-primary"/>
+  {project.type==='web'?<FaLink className="w-5 h-5 text-muted-foreground"/>:<IoLogoGooglePlaystore className="w-5 h-5 text-muted-foreground" />}
   </Link>
    <Link href={project.github}>
-   <FaGithub className="w-5 h-5 text-primary"/>
+   <FaGithub className="w-5 h-5 text-muted-foreground"/>
    </Link>
     </div>
  </div>

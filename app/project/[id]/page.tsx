@@ -3,8 +3,10 @@
 import { projects } from '@/constants/data';
 import { ProjectType } from '@/types';
 import axios from 'axios';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+import { IoLogoGooglePlaystore } from 'react-icons/io5';
 import { RxExternalLink } from "react-icons/rx";
 
 const ProjectPage = ({params}:{params:{id:string}}) => {
@@ -33,12 +35,21 @@ const ProjectPage = ({params}:{params:{id:string}}) => {
         
         </div>
 
-       {
-        project?.type==='web' &&  <Link href={project?.website || ''} className='flex flex-row items-center gap-x-2 text-muted-foreground'>
+     <div className=''>
+     {
+        project?.type==='web' ?  <Link href={project?.website || ''} className='flex flex-row items-center gap-x-2 text-muted-foreground'>
         <RxExternalLink size={20}/>
           Live Preview
-        </Link>
+        </Link>:
+      <Link href={project?.website || ''} className='bg-black dark:bg-card text-white max-w-52   self-start  p-2 rounded-md flex flex-row items-center gap-x-3  font-medium'>
+     <IoLogoGooglePlaystore size={32}/>
+  <div>
+    <p className='uppercase'>get it on</p>
+    <p className='text-xl capitalize'>  Play store</p>
+  </div>
+      </Link>
        }
+     </div>
        </div>
         </div>
   )

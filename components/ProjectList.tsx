@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LayoutDashboard } from 'lucide-react'
 import { FaDesktop, FaMobile } from 'react-icons/fa'
 import { FaMobileScreen } from 'react-icons/fa6'
+import MotionDiv from './MotionDiv'
 const ProjectList = () => {
   const [projectsData, setProjectsData] = useState(projects)
    const filter=(category:'all' | 'web'| 'mobile')=>{
@@ -18,6 +19,7 @@ const ProjectList = () => {
    
   return (
  <div className='space-y-6'>
+  <MotionDiv>
   <div className='w-full flex justify-center'>
      <Tabs defaultValue="all" >
   <TabsList>
@@ -46,6 +48,7 @@ const ProjectList = () => {
  
 </Tabs>
    </div>
+  </MotionDiv>
 
      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6 px-8  ">
    {
