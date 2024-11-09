@@ -5,10 +5,13 @@ const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: "tayebhatem.portfolio@gmail.com",
+      user: "tayebhatem98@gmail.com",
       pass: process.env.STMP_PASSWORD,
     },
-    secure:true
+    secure:true,
+    tls: {
+      rejectUnauthorized: false, 
+    },
   });
 
   export const sendMail=async(email:FormDataEntryValue | null,name:FormDataEntryValue | null,message:FormDataEntryValue | null)=>{

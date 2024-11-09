@@ -36,6 +36,7 @@ const form = useForm<z.infer<typeof mailSchema>>({
       message:""
     },
   })
+
   async function  onSubmit(values: z.infer<typeof mailSchema>) {
    
     sendMessage(async()=>{
@@ -48,6 +49,7 @@ const form = useForm<z.infer<typeof mailSchema>>({
       icon:<IoMdCheckmarkCircle className="text-primary" size={20}/>,
    
      })
+     form.reset()
   } catch (error) {
    console.log(error)
   }
