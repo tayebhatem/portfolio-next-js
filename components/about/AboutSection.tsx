@@ -51,8 +51,8 @@ const AboutSection = () => {
             
             <div className="overflow-y-clip">
              {
-                translation.experience.map((item)=>(
-                    <div className="relative flex gap-x-4 py-2">
+                translation.experience.map((item,index)=>(
+                    <div className="relative flex gap-x-4 py-2" key={index}>
                     <div className="before:content-[''] before:-left-1.5 before:top-3.5 before:absolute before:rounded-full before:w-4 before:h-4 before:bg-primary
                                      after:content-[''] after:absolute  after:top-4 after:w-1.5 after:h-full after:bg-primary">
                       </div>
