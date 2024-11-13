@@ -4,13 +4,12 @@ import { Card } from '@/components/ui/card';
 import { languageSpeak, technicalSkills } from '@/constants/data';
 import { aboutSectionTranslation, homeSectionTranslation, projectsSectionTranslation } from '@/constants/translation';
 import useLanguageStore from '@/stores/useLanguageStore';
-import { Printer } from 'lucide-react';
 import React, { useRef } from 'react'
-import { FaShare } from 'react-icons/fa';
 import { FaPhone,FaLocationDot,FaGithub,FaLink,FaLinkedin } from "react-icons/fa6";
 import { IoMdMail, IoMdPrint } from "react-icons/io";
 import {useReactToPrint} from 'react-to-print';
-export const projects = [
+
+ const projects = [
     {
       slug: 'cridi',
       name: {
