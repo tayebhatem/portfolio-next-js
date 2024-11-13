@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { ModeToggle } from "@/components/ModeToggle";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -13,9 +14,13 @@ import {
 import Link from "next/link";
 import Navbar from './Navbar';
 import Logo from './Logo';
+import LanguageDropdown from './custome-ui/LanguageDropdown';
+import useLanguageStore from '@/stores/useLanguageStore';
+import { headerTranslation } from '@/constants/translation';
 
 const Header = () => {
-  
+  const {language}=useLanguageStore()
+  const translation=headerTranslation(language)
   return (
     <header className="w-full border-b border-b-muted fixed top-0 z-40 bg-card">
     <div className="flex   py-8 px-4 justify-between items-center lg:max-w-5xl  mx-auto">
@@ -23,6 +28,7 @@ const Header = () => {
   <Navbar/>
 
   <div className="flex gap-x-4 items-center">
+    <LanguageDropdown/>
   <ModeToggle/>
 
    <Sheet >
@@ -36,21 +42,31 @@ const Header = () => {
   </SheetTitle>
   <SheetDescription>
    
-    <nav className='flex gap-6 flex-col w-full justify-center items-center mt-4 text-primary font-medium text-lg '>
+    <nav className='flex gap-6 flex-col w-full justify-center items-center mt-4  font-medium text-lg '>
     <SheetClose asChild>
-    <Link href={'#home'} >Home</Link>
+    <Link href={'#home'} >
+    {translation.home}
+    </Link>
       </SheetClose>   
       <SheetClose asChild>
-      <Link href={'#technologies'}>Technologie</Link>
+      <Link href={'#technologies'}>
+      {translation.technologies}
+      </Link>
       </SheetClose>
       <SheetClose asChild>
-      <Link href={'#about'}>About</Link>
+      <Link href={'#about'}>
+      {translation.about}
+      </Link>
       </SheetClose>
       <SheetClose asChild>
-      <Link href={'#projects'}>Projects</Link>
+      <Link href={'#projects'}>
+      {translation.projects}
+      </Link>
       </SheetClose>
       <SheetClose asChild>
-      <Link href={'#contact'}>Contact</Link>
+      <Link href={'#contact'}>
+      {translation.contact}
+      </Link>
       </SheetClose>
 
 

@@ -8,6 +8,9 @@ import { Toaster } from "@/components/ui/sonner"
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
+
+import LanguageProvider from "@/provider/LanguageProvider";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,23 +28,26 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
 
       <body className={inter.className}>
+   
       <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
+      <LanguageProvider>
+
+      
+
+      
         <Header/>
        <Main>
        {children}
        </Main>
-        
-       
-      
         <Footer/>
         <Toaster />
+        </LanguageProvider>
         </ThemeProvider>
-        
         </body>
     </html>
   );

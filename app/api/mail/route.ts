@@ -1,4 +1,3 @@
-'use server'
 
 import { sendMail } from "@/lib/mail"
 

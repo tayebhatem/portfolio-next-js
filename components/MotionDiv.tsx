@@ -17,6 +17,7 @@ const MotionDiv = ({children}:{children:ReactNode}) => {
     }
   return (
     <motion.div
+    className=''
     layout
     initial="offscreen"
     whileInView="onscreen"

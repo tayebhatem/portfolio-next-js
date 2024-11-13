@@ -10,7 +10,7 @@ const Logo = () => {
     <FaCode className='w-8 h-8'/>
     <h1
     className={cn(
-     "font-extrabold tracking-tight text-3xl",
+     "font-extrabold tracking-tight text-3xl text-secondary-foreground/90",
     kanit.className
    )}>
      Dev<span className="text-primary">Tech</span></h1>

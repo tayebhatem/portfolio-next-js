@@ -1,4 +1,4 @@
-import { ProjectType } from '@/types'
+'use client'
 import React, { useEffect, useState } from 'react'
 import ProjectCard from './ProjectCard'
 import { projects } from '@/constants/data'
@@ -7,8 +7,10 @@ import { LayoutDashboard } from 'lucide-react'
 import { FaDesktop, FaMobile } from 'react-icons/fa'
 import { FaMobileScreen } from 'react-icons/fa6'
 import MotionDiv from './MotionDiv'
+import useLanguageStore from '@/stores/useLanguageStore'
 const ProjectList = () => {
   const [projectsData, setProjectsData] = useState(projects)
+  const {language}=useLanguageStore()
    const filter=(category:'all' | 'web'| 'mobile')=>{
         if(category==='all'){
          setProjectsData(projects)
@@ -28,7 +30,8 @@ const ProjectList = () => {
   value="all" 
   onClick={()=>filter('all')}>
     <LayoutDashboard className='' size={20}/>
-    All</TabsTrigger>
+    {language.id==='en'?"All":"Tout"}
+    </TabsTrigger>
 
     <TabsTrigger 
     value="web" 
