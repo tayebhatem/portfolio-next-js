@@ -175,8 +175,8 @@ tayebhatem.site
 </h1>
 <div className='space-y-0.5'>
 {
-    languageSpeak.map((item)=>(
-        <div className='flex flex-row items-center gap-x-8'>
+    languageSpeak.map((item,index)=>(
+        <div className='flex flex-row items-center gap-x-8' key={index}>
     <p className='text-white capitalize w-10 text-sm '>{language.id==='en'?item.name.en:item.name.fr}</p>
    <div className='flex flex-row gap-x-1.5 w-full '>
     {
@@ -236,8 +236,8 @@ tayebhatem.site
 </h1>
 <div className='overflow-y-clip'>
 {
-                aboutTranslation.experience.map((item)=>(
-                    <div className="relative flex gap-x-4 py-2 ">
+                aboutTranslation.experience.map((item,index)=>(
+                    <div className="relative flex gap-x-4 py-2 " key={index}>
                     <div className="before:content-[''] before:-left-1 before:top-3.5 before:absolute before:rounded-full before:w-3 before:h-3 before:bg-primary
                                      after:content-[''] after:absolute  after:top-4 after:w-1 after:h-full after:bg-primary">
                       </div>
