@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter,Poppins,Raleway } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
@@ -12,7 +12,8 @@ import Main from "@/components/Main";
 import LanguageProvider from "@/provider/LanguageProvider";
 
 const inter = Inter({ subsets: ["latin"] });
-
+const raleway=Raleway({subsets:["latin","cyrillic"]})
+const poppins=Poppins({subsets:["latin"],weight:['100','200','300','400','500','700','800','900']})
 export const metadata: Metadata = {
   title: "tayeb hatem",
   description: "tayeb hatem portfolio",

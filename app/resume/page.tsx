@@ -1,6 +1,7 @@
 'use client'
 import { ShareResume } from '@/components/custome-ui/ShareResume';
 import { Card } from '@/components/ui/card';
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { languageSpeak, technicalSkills } from '@/constants/data';
 import { aboutSectionTranslation, homeSectionTranslation, projectsSectionTranslation } from '@/constants/translation';
 import useLanguageStore from '@/stores/useLanguageStore';
@@ -66,20 +67,22 @@ const ResumePage = () => {
      const handlePrint = useReactToPrint({
         content: () => resumeRef.current,
       });
+
   return (
-   <div className='my-8  w-full flex justify-center  '>
-   <Card className='relative'>
-    <div className='absolute top-0 right-0 p-3 flex flex-row gap-x-4 items-center'>
+   <div className='my-8 relative '>
+     <div className='absolute rounded-full bg-background top-2 z-10 right-2 p-3 flex flex-row gap-x-4 items-center'>
        <ShareResume/>
        
         <button onClick={handlePrint}>
-        <IoMdPrint size={36} className='text-muted-foreground hover:opacity-30' />
+        <IoMdPrint size={28} className='text-muted-foreground hover:opacity-30' />
         </button>
        
     </div>
+   <Card className='relative overflow-auto  '>
+   
 
 
-   <div className='grid grid-cols-3 w-full flex-1 h-full' ref={resumeRef}>
+   <div className='grid grid-cols-3  min-w-[800px] ' ref={resumeRef}>
 
 <div className='bg-primary p-10 space-y-2 col-span-1 flex flex-col items-center h-full '>
 <div className="rounded-full overflow-hidden size-44 border-[6px] border-white " >
@@ -102,7 +105,8 @@ const ResumePage = () => {
 
  <p className='flex flex-row items-center gap-x-2 text-white  text-sm'>
  <FaLocationDot />
- Bordj-el-kiffan ,Alger
+
+ {language.id==='en'?"Bordj El Kiffan ,Algiers":"Bordj-el-kiffan ,Alger"}
  </p>
 
  <a href='https://www.tayebhatem.site'>
@@ -241,7 +245,7 @@ tayebhatem.site
                                      after:content-[''] after:absolute  after:top-4 after:w-1 after:h-full after:bg-primary">
                       </div>
                       <div>
-                        <h2 className="font-medium text-xl">{item.title}</h2>
+                        <h2 className="font-semibold text-xl text-black">{item.title}</h2>
                         <h3 className="font-medium">{item.years}</h3>
                        <div className='flex flex-row gap-x-4 items-start'>
                         <span className='w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2.5'></span>
@@ -260,7 +264,7 @@ tayebhatem.site
 
 
 <div className='space-y-1 '>
-<h1 className='text-primary text-xl uppercase font-bold border-b-2 pb-2 border-b-primary '>
+<h1 className='text-primary  text-xl uppercase font-bold border-b-2 pb-2 border-b-primary '>
     {projectsTranslation.title}
 </h1>
 <div className='space-y-1' >
@@ -269,7 +273,7 @@ tayebhatem.site
                     <div className="relative flex gap-x-4" key={item.slug}>
                    
                       <div>
-                        <h2 className="font-medium text-xl ">
+                        <h2 className="font-semibold text-xl text-black  ">
                             {language.id==='en'?item.name.en:item.name.fr}
                             </h2>
                        <div className='flex flex-row gap-x-4 items-start'>
@@ -292,6 +296,7 @@ tayebhatem.site
 
  </div>
    </Card>
+ 
    </div>
   )
 }

@@ -49,7 +49,7 @@ export function ShareResume() {
     <Dialog>
       <DialogTrigger asChild>
        <button>
-       <FaShare size={36} className='text-muted-foreground hover:opacity-30' />
+       <FaShare size={28} className='text-muted-foreground hover:opacity-30' />
        </button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">

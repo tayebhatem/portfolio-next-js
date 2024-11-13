@@ -27,7 +27,7 @@ const Header = () => {
   <Logo/>
   <Navbar/>
 
-  <div className="flex gap-x-4 items-center">
+  <div className="flex flex-row gap-x-4">
     <LanguageDropdown/>
   <ModeToggle/>
 
