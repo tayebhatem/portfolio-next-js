@@ -78,7 +78,7 @@ const ResumePage = () => {
         <button onClick={handlePrint}>
         <IoMdPrint size={28} className='text-muted-foreground hover:opacity-30' />
         </button>
-       <button onClick={() => toPDF()}>
+       <button onClick={() => toPDF()} className='hidden'>
         <BsFilePdf size={28} className='text-muted-foreground hover:opacity-30'/>
        </button>
     </div>
