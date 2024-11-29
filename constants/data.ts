@@ -171,7 +171,7 @@ export const projects: ProjectType[] = [
   export const technicalSkills:SkillType[] = [
     {
       title: { en: "Languages", fr: "Langages" },
-      skills:  'JavaScript, TypeScript, Python, Java'
+      skills:  'JavaScript, TypeScript, Python, Java , Php'
     },
     {
       title: { en: "Frameworks & Libraries", fr: "Frameworks & Bibliothèques" },
@@ -183,7 +183,7 @@ export const projects: ProjectType[] = [
     },
     {
       title: { en: "Tools & Platforms", fr: "Outils & Plateformes" },
-      skills: 'Git, GitHub, Firebase, Prisma, Clerk, Appwrite, Supabase, RESTful APIs'
+      skills: 'Git, GitHub, Firebase, Prisma, Clerk, Appwrite, Supabase, RESTful APIs,Wordpress'
     },
     {
       title: { en: "Database Management", fr: "Gestion de Bases de Données" },

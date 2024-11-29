@@ -9,7 +9,8 @@ import React, { useRef } from 'react'
 import { FaPhone,FaLocationDot,FaGithub,FaLink,FaLinkedin } from "react-icons/fa6";
 import { IoMdMail, IoMdPrint } from "react-icons/io";
 import {useReactToPrint} from 'react-to-print';
-
+import { usePDF } from 'react-to-pdf';
+import { BsFilePdf } from 'react-icons/bs';
  const projects = [
     {
       slug: 'cridi',
@@ -64,21 +65,24 @@ const ResumePage = () => {
     const profileTranslation=homeSectionTranslation(language)
     const projectsTranslation=projectsSectionTranslation(language)
      const resumeRef = useRef<HTMLDivElement>(null);
+     const { toPDF, targetRef } = usePDF({filename: 'cv.pdf'});
      const handlePrint = useReactToPrint({
         content: () => resumeRef.current,
       });
 
   return (
    <div className='my-8 relative '>
-     <div className='absolute rounded-full bg-background top-2 z-10 right-2 p-3 flex flex-row gap-x-4 items-center'>
+     <div className='absolute  rounded-full bg-background top-2 z-10 right-2 p-3 flex flex-row gap-x-4 items-center'>
        <ShareResume/>
        
         <button onClick={handlePrint}>
         <IoMdPrint size={28} className='text-muted-foreground hover:opacity-30' />
         </button>
-       
+       <button onClick={() => toPDF()}>
+        <BsFilePdf size={28} className='text-muted-foreground hover:opacity-30'/>
+       </button>
     </div>
-   <Card className='relative overflow-auto  '>
+   <Card className='relative overflow-auto ' ref={targetRef}>
    
 
 
