@@ -50,7 +50,7 @@ const HeroSection = () => {
             <Button
               onClick={() => router.push('/resume')}
               size={'lg'}
-              className="text-lg flex items-center gap-2 capitalize text-white"
+              className="text-lg flex items-center gap-2 capitalize text-white rounded-lg"
             >
            {translation.downloadCv}
               <ArrowRight className="text-white"/>
