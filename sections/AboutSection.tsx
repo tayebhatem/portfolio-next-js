@@ -1,8 +1,8 @@
 import React from 'react'
-import Section from '../custome-ui/Section'
-import MotionDiv from '../MotionDiv'
+import Section from '@/components/custome-ui/Section'
+import MotionDiv from '@/components/custome-ui/MotionDiv'
 import { skills, technicalSkills } from '@/constants/data'
-import SkillItem from '../SkillItem'
+import SkillItem from '@/components/SkillItem'
 import useLanguageStore from '@/stores/useLanguageStore'
 import { aboutSectionTranslation } from '@/constants/translation'
 

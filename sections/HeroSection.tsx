@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import Section from '../custome-ui/Section'
 import { SocialMediaList } from "@/components/custome-ui/SocialMediaList";
 import WordRotate from "@/components/ui/word-rotate";
 import { cn } from "@/lib/utils";
@@ -9,10 +8,12 @@ import { Button } from "@/components/ui/button";
 import {  ArrowRight, Download } from "lucide-react";
 import {  motion } from "framer-motion";
 import { useRouter } from 'next/navigation';
-import { Hero } from '../custome-ui/Hero';
+
 import useLanguageStore from '@/stores/useLanguageStore';
 import { homeSectionTranslation } from '@/constants/translation';
-const HomeScetion = () => {
+import Section from '@/components/custome-ui/Section';
+import { Hero } from '@/components/Hero';
+const HeroSection = () => {
     const router = useRouter();
     const {language}=useLanguageStore()
     const translation=homeSectionTranslation(language)
@@ -72,4 +73,4 @@ const HomeScetion = () => {
   )
 }
 
-export default HomeScetion
+export default HeroSection

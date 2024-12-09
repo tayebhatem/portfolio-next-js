@@ -5,11 +5,12 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { Toaster } from "@/components/ui/sonner"
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/sections/Footer";
+
 import Main from "@/components/Main";
 
 import LanguageProvider from "@/provider/LanguageProvider";
+import Header from "@/sections/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 const raleway=Raleway({subsets:["latin","cyrillic"]})

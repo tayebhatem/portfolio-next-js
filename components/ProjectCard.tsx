@@ -2,12 +2,13 @@
 import Link from 'next/link';
 import React from 'react'
 import { FaGithub, FaLink } from 'react-icons/fa';
-import MotionDiv from './MotionDiv';
+import MotionDiv from './custome-ui/MotionDiv';
 import { MagicCard } from './ui/magic-card';
 import { useTheme } from 'next-themes';
 import { ProjectType } from '@/types';
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import useLanguageStore from '@/stores/useLanguageStore';
+import { ArrowRight } from 'lucide-react';
 const ProjectCard = ({project}:{project:ProjectType}) => {
   const { theme } = useTheme();
   const {language}=useLanguageStore()
@@ -43,6 +44,7 @@ const ProjectCard = ({project}:{project:ProjectType}) => {
         
         </div>
 </div>
+    <div className='flex flex-row justify-between items-center'>
     <div className="flex flex-row gap-x-4 justify-end py-2">
     <Link href={project.url}>
   {project.type==='web'?<FaLink className="w-5 h-5 text-muted-foreground"/>:<IoLogoGooglePlaystore className="w-5 h-5 text-muted-foreground" />}
@@ -50,6 +52,12 @@ const ProjectCard = ({project}:{project:ProjectType}) => {
    <Link href={project.github}>
    <FaGithub className="w-5 h-5 text-muted-foreground"/>
    </Link>
+    </div>
+
+    <Link href={`/project/${project.slug}`} className='flex flex-row items-center gap-x-2 text-sm text-primary font-medium'>
+    {language.id==='en'?'Read more':'Lire plus'}
+    <ArrowRight className='size-4'/>
+    </Link>
     </div>
  </div>
   

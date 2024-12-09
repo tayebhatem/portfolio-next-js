@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation";
-import OrbitingCircles from "../ui/orbiting-circles";
+import OrbitingCircles from "./ui/orbiting-circles";
 import {
   useWindowSize,
 } from '@react-hook/window-size'
@@ -13,7 +13,7 @@ export function Hero() {
         gitHub: (props: IconProps) => (
           <svg viewBox="0 0 438.549 438.549" 
           {...props}
-          className="rounded-full cursor-pointer w-8 sm:w-10"
+          className="rounded-full cursor-pointer w-8"
           onClick={()=>{
              router.push("https://github.com/tayebhatem")
           }}
@@ -27,7 +27,7 @@ export function Hero() {
         linkedIn: (props: IconProps) => (
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"
           {...props}
-          className="rounded-full cursor-pointer  w-8 sm:w-10"
+          className="rounded-full cursor-pointer  w-8"
           onClick={()=>{
              router.push("https://www.linkedin.com/in/tayeb-hatem-3a2100156/")
           }}
@@ -37,7 +37,7 @@ export function Hero() {
           <svg xmlns="http://www.w3.org/2000/svg" 
           aria-label="Upwork" 
           role="img" 
-          className="rounded-full cursor-pointer  w-8 sm:w-10"
+          className="rounded-full cursor-pointer  w-8"
           {...props}
          onClick={()=>{
           router.push("https://www.upwork.com/freelancers/~019526742efa60c32e")
@@ -54,23 +54,21 @@ export function Hero() {
       
 
   return (
-    <div className="relative flex  w-full h-[450px] flex-col items-center justify-center ">
-    <div className="rounded-full overflow-hidden w-52 h-52 sm:h-64 sm:w-64" >
-    <img src="/assets/profile.jpg" className="object-center"/>
-   </div>
+    <div className="relative flex   w-full h-[400px] flex-col items-center justify-center  ">
+     <img src="/assets/profile.jpg" className="object-cover rounded-full size-60  sm:size-72"/>
       <OrbitingCircles
-        className="size-12 border-none bg-transparent"
-        radius={width<=640 ?140:160}
+        className="size-12    border-none bg-transparent hidden sm:flex justify-center items-center"
+        radius={180}
         duration={20}
         
       >
 
-        <Icons.gitHub className="w-6 h-6"  />
+        <Icons.gitHub  />
       </OrbitingCircles>
       
       <OrbitingCircles
-        className="size-12 border-none bg-transparent"
-        radius={width<=640 ? 140:160}
+       className="size-12    border-none bg-transparent hidden sm:flex justify-center items-center"
+        radius={180}
         duration={20}
         delay={20}
        
@@ -79,14 +77,15 @@ export function Hero() {
       </OrbitingCircles>
 
       <OrbitingCircles
-        className="size-12 border-none bg-transparent"
-        radius={width<=640 ? 140:160}
+       className="size-12    border-none bg-transparent hidden sm:flex justify-center items-center"
+        radius={180}
         duration={20}
         delay={3}
        
       >
         <Icons.upWork />
       </OrbitingCircles>
+      
     </div>
   );
 }

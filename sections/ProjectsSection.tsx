@@ -2,8 +2,8 @@
 import { projectsSectionTranslation } from '@/constants/translation'
 import useLanguageStore from '@/stores/useLanguageStore'
 import React from 'react'
-import Section from '../custome-ui/Section'
-import ProjectList from '../ProjectList'
+import Section from '@/components/custome-ui/Section'
+import ProjectList from '@/components/ProjectList'
 
 const ProjectsSection = () => {
     const {language}=useLanguageStore()

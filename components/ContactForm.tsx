@@ -1,7 +1,7 @@
 "use client"
 import { z } from "zod"
 import React, { useTransition } from 'react'
-import MotionDiv from './MotionDiv'
+import MotionDiv from './custome-ui/MotionDiv'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"

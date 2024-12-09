@@ -99,22 +99,6 @@ export const projects: ProjectType[] = [
     type: 'web',
   },
   {
-    slug: 'ai-image',
-    name: {
-      en:'Ai Image',
-      fr:'Ai Image'
-    },
-    description: {
-      en: 'This AI-powered image editing website. Users can remove backgrounds, eliminate objects, and change image ratios with ease. The platform offers a subscription model, allowing users to purchase points for additional image editing and generation using the Edhahabia card. This comprehensive tool ensures a seamless and efficient image editing experience for all users.',
-      fr: "Ce site web d'édition d'images alimenté par l'IA. Les utilisateurs peuvent supprimer des arrière-plans, éliminer des objets et modifier les ratios d'images en toute simplicité. La plateforme propose un modèle d'abonnement, permettant aux utilisateurs d'acheter des points pour l'édition et la génération d'images supplémentaires via la carte Edhahabia. Cet outil complet garantit une expérience d'édition d'image fluide et efficace pour tous les utilisateurs."
-    },
-    thumbnail: '/assets/imageai.PNG',
-    github: 'https://github.com/tayebhatem/ecomerce-website',
-    url: 'https://image-ai-delta.vercel.app',
-    tools: ['react', 'next js', 'tailwind', 'clerk', 'mongodb'],
-    type: 'web'
-  },
-  {
     slug: 'auth-js-system',
     name: {
       en: 'Next.js Auth System',

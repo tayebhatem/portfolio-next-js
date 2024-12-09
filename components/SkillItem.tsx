@@ -1,5 +1,5 @@
 import React from 'react'
-import MotionDiv from './MotionDiv'
+import MotionDiv from './custome-ui/MotionDiv'
 import { SkillType } from '@/types'
 import useLanguageStore from '@/stores/useLanguageStore'
 

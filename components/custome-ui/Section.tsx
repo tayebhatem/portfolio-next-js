@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import MotionDiv from '../MotionDiv'
+import MotionDiv from './MotionDiv'
 
 const Section = ({children,id,title,description}:{children:ReactNode,id:string,title:string | undefined,description:string | undefined}) => {
   return (

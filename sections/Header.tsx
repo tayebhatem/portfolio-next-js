@@ -12,9 +12,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Link from "next/link";
-import Navbar from './Navbar';
-import Logo from './Logo';
-import LanguageDropdown from './custome-ui/LanguageDropdown';
+import Navbar from '@/components/Navbar';
+import Logo from '@/components/Logo';
+import LanguageDropdown from '@/components/custome-ui/LanguageDropdown';
 import useLanguageStore from '@/stores/useLanguageStore';
 import { headerTranslation } from '@/constants/translation';
 
@@ -22,8 +22,8 @@ const Header = () => {
   const {language}=useLanguageStore()
   const translation=headerTranslation(language)
   return (
-    <header className="w-full border-b border-b-muted fixed top-0 z-40 bg-card">
-    <div className="flex   py-8 px-4 justify-between items-center lg:max-w-5xl  mx-auto">
+    <header className="w-full border-b border-b-muted fixed top-0 z-50 bg-card">
+    <div className="flex   py-6 justify-between items-center max-w-screen-lg mx-auto  ">
   <Logo/>
   <Navbar/>
 

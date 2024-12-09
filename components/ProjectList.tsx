@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LayoutDashboard } from 'lucide-react'
 import { FaDesktop, FaMobile } from 'react-icons/fa'
 import { FaMobileScreen } from 'react-icons/fa6'
-import MotionDiv from './MotionDiv'
+import MotionDiv from './custome-ui/MotionDiv'
 import useLanguageStore from '@/stores/useLanguageStore'
 const ProjectList = () => {
   const [projectsData, setProjectsData] = useState(projects)

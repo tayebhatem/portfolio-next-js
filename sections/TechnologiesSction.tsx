@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
-import Section from '../custome-ui/Section'
-import MotionDiv from '../MotionDiv'
-import { Technologies } from '../custome-ui/Technologies'
+import Section from '@/components/custome-ui/Section'
+import MotionDiv from '@/components/custome-ui/MotionDiv'
+import { Technologies } from '@/components/Technologies'
 import useLanguageStore from '@/stores/useLanguageStore'
 import { technologiesSectionTranslation } from '@/constants/translation'
 

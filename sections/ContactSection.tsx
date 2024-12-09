@@ -2,10 +2,10 @@
 import { contactSectionTranslation } from '@/constants/translation'
 import useLanguageStore from '@/stores/useLanguageStore'
 import React from 'react'
-import Section from '../custome-ui/Section'
-import ContactForm from '../ContactForm'
-import MotionDiv from '../MotionDiv'
-import { Tools } from '../custome-ui/Tools'
+import Section from '@/components/custome-ui/Section'
+import ContactForm from '@/components/ContactForm'
+import MotionDiv from '@/components/custome-ui/MotionDiv'
+import { Tools } from '@/components/Tools'
 
 const ContactSection = () => {
     const {language}=useLanguageStore()
