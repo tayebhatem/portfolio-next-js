@@ -11,7 +11,7 @@ export const projects: ProjectType[] = [
       en: 'This is a modern and responsive banking landing page, built with Vite, styled using Tailwind CSS, and enhanced with Framer Motion for smooth animations. The landing page features a sleek and professional design tailored for financial institutions. It includes sections for showcasing banking services, customer testimonials, call-to-action buttons for account creation, and an intuitive contact form. With its responsive design, the landing page delivers an optimized user experience across desktops, tablets, and mobile devices, while the animations create a dynamic and engaging user interface.',
       fr: "Il s'agit d'une page de destination bancaire moderne et réactive, construite avec Vite, stylée avec Tailwind CSS et enrichie par Framer Motion pour des animations fluides. La page d'accueil présente un design élégant et professionnel adapté aux institutions financières. Elle inclut des sections pour mettre en valeur les services bancaires, les témoignages de clients, des boutons d'appel à l'action pour la création de compte et un formulaire de contact intuitif. Avec son design réactif, la page offre une expérience utilisateur optimisée sur les ordinateurs de bureau, tablettes et appareils mobiles, tandis que les animations créent une interface utilisateur dynamique et attrayante."
     },
-    thumbnail: '/assets/banking.PNG',
+    thumbnail: '/assets/banking-web.PNG',
     github: 'https://github.com/tayebhatem/Bancking-landing-page',
     url: 'https://banking-landing-page-two.vercel.app/',
     tools: ['vite', 'tailwind', 'framer motion'],
@@ -111,7 +111,7 @@ export const projects: ProjectType[] = [
     thumbnail: '/assets/authsystem.PNG',
     github: 'https://github.com/tayebhatem/nextjs-auth-system',
     url: 'https://auth-system-nextjs.vercel.app',
-    tools: ['react', 'next js', 'tailwind', 'prisma', 'postgresql', 'auth.js'],
+    tools: ['react', 'next js', 'tailwind', 'prisma', 'postgresql'],
     type: 'web'
   }
   

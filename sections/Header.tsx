@@ -29,7 +29,7 @@ const Header = () => {
  
   
   return (
-    <header className={clsx("w-full py-6  fixed top-0 z-50  transition-all duration-300", y && y>100 && 'backdrop-blur-sm bg-card/50  shadow-sm  py-2.5')}>
+    <header className={clsx("w-full  fixed top-0 z-50  transition-all duration-300", y && y>100 ? 'backdrop-blur-sm bg-card/50  shadow-sm  py-2.5':'py-6 ')}>
     <div className="flex    px-6 lg:px-0  justify-between items-center max-w-screen-lg mx-auto">
   <Logo/>
   <Navbar/>
