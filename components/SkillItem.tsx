@@ -12,7 +12,7 @@ const SkillItem = ({skill}:{skill:SkillType}) => {
 
           <div className='space-y-1'>
             <h3 className='text-xl font-medium'>{language.id==='en'?skill.title.en:skill.title.fr}</h3>
-          <p  className="text-base">
+          <p  className="text-muted-foreground text-sm">
             
             {skill.skills}
             </p>

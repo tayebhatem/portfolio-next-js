@@ -23,7 +23,7 @@ const Header = () => {
   const translation=headerTranslation(language)
   return (
     <header className="w-full border-b border-b-muted fixed top-0 z-50 bg-card">
-    <div className="flex   py-6 justify-between items-center max-w-screen-lg mx-auto  ">
+    <div className="flex   py-8 px-4 justify-between items-center max-w-screen-lg mx-auto">
   <Logo/>
   <Navbar/>
 
