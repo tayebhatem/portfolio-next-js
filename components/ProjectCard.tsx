@@ -22,7 +22,7 @@ const ProjectCard = ({project}:{project:ProjectType}) => {
   <img src={project.thumbnail} className="object-cover  transition-all hover:scale-110 rounded-t-md"/>
   </Link>
  <div className='p-3 space-y-2'>
- <h1 className="text-lg font-semibold capitalize">
+ <h1 className="text-lg font-semibold capitalize line-clamp-1">
       {
        language.id==='en'? project.name.en: project.name.fr
       }
@@ -54,7 +54,7 @@ const ProjectCard = ({project}:{project:ProjectType}) => {
    </Link>
     </div>
 
-    <Link href={`/project/${project.slug}`} className='flex flex-row items-center gap-x-2 text-sm text-primary font-medium'>
+    <Link href={`/project/${project.slug}`} className='flex flex-row items-center gap-x-2 text-sm text-primary dark:text-white font-medium'>
     {language.id==='en'?'Read more':'Lire plus'}
     <ArrowRight className='size-4'/>
     </Link>

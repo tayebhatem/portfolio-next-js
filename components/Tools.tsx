@@ -37,7 +37,7 @@ const slugs = [
 
 export function Tools() {
   return (
-    <div className=" overflow-hidden  ">
+    <div className=" overflow-hidden hidden md:block  ">
       <IconCloud iconSlugs={slugs} />
     </div>
   );

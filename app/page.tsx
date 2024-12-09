@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <>
     <HeroSection/>
-    <TechnologiesSction/>
     <AboutSection/>
+    <TechnologiesSction/>
     <ProjectsSection/>
    <ContactSection/>
     </>

@@ -1,7 +1,23 @@
 import { LanguageType, ProjectType, SkillType } from "@/types";
 
 export const projects: ProjectType[] = [
-
+  {
+    slug: 'banking-landing-page',
+    name: {
+      en: 'Banking Landing Page',
+      fr: 'Page de destination bancaire',
+    },
+    description: {
+      en: 'This is a modern and responsive banking landing page, built with Vite, styled using Tailwind CSS, and enhanced with Framer Motion for smooth animations. The landing page features a sleek and professional design tailored for financial institutions. It includes sections for showcasing banking services, customer testimonials, call-to-action buttons for account creation, and an intuitive contact form. With its responsive design, the landing page delivers an optimized user experience across desktops, tablets, and mobile devices, while the animations create a dynamic and engaging user interface.',
+      fr: "Il s'agit d'une page de destination bancaire moderne et réactive, construite avec Vite, stylée avec Tailwind CSS et enrichie par Framer Motion pour des animations fluides. La page d'accueil présente un design élégant et professionnel adapté aux institutions financières. Elle inclut des sections pour mettre en valeur les services bancaires, les témoignages de clients, des boutons d'appel à l'action pour la création de compte et un formulaire de contact intuitif. Avec son design réactif, la page offre une expérience utilisateur optimisée sur les ordinateurs de bureau, tablettes et appareils mobiles, tandis que les animations créent une interface utilisateur dynamique et attrayante."
+    },
+    thumbnail: '/assets/banking-landing-page.PNG',
+    github: 'https://github.com/tayebhatem/Bancking-landing-page',
+    url: 'https://banking-landing-page-two.vercel.app/',
+    tools: ['vite', 'tailwind', 'framer motion'],
+    type: 'web',
+  },
+  
   {
     slug: 'cridi',
     name: {
@@ -130,13 +146,13 @@ export const projects: ProjectType[] = [
     'git'
   ]
   export const skills=[
-    'JavaScript, TypeScript, Python, Java',
+    'JavaScript, TypeScript, Python, Java, Php',
     'HTML ,CSS, Tailwind CSS',
-    'React, React Native, Expo go, Node.js,Vite, Express',
+    'React, React Native, Expo go, Node.js, Vite, Express',
     'Git, GitHub, Firebase, Prisma, Clerk, Appwrite, Supabase, RESTful APIs',
     'MySQL, MongoDB, PostgreSQL',
-    'Figma, Adobe Illustrator',
-    'UI/UX Design, Redux, Zustand, Web scraping,Third Party Libraries'
+    'Figma, Adobe Illustrator, Vs Code',
+    'UI/UX Design, Redux, Zustand, Web scraping, Third Party Libraries, WordPress, CMS'
   ]
 
   export const languages:LanguageType[]=[

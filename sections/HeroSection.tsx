@@ -13,6 +13,7 @@ import useLanguageStore from '@/stores/useLanguageStore';
 import { homeSectionTranslation } from '@/constants/translation';
 import Section from '@/components/custome-ui/Section';
 import { Hero } from '@/components/Hero';
+import Link from 'next/link';
 const HeroSection = () => {
     const router = useRouter();
     const {language}=useLanguageStore()
@@ -37,25 +38,31 @@ const HeroSection = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-col gap-y-4 items-center md:items-baseline text-center md:text-left self-center"
           >
-            <h1 className="flex flex-col justify-center text-3xl  sm:text-4xl lg:text-5xl gap-x-2 font-bold">
+            <h1 className="flex flex-col justify-center text-3xl  sm:text-4xl lg:text-5xl gap-x-2 font-semibold">
               <span className="text-primary">{translation.title}</span>
               <WordRotate
-                className="font-bold text-black dark:text-white capitalize w-full"
+                className="font-semibold text-black dark:text-white capitalize w-full"
                 words={translation.words}
               />
             </h1>
             <p className="text-muted-foreground text-sm">
             {translation.description}
             </p>
-            <Button
-              onClick={() => router.push('/resume')}
-              size={'lg'}
-              className="text-lg flex items-center gap-2 capitalize text-white rounded-lg"
-            >
-           {translation.downloadCv}
-              <ArrowRight className="text-white"/>
-            </Button>
-            <SocialMediaList/>
+           
+
+            <div className='flex flex-row items-center gap-x-2 '>
+              <Link href={'#contact'} className='bg-primary  text-white rounded-xl text-xl px-6 py-4  hover:shadow-md hover:bg-primary/90 duration-300 transition-all  '>
+              {translation.hireMe}
+              </Link>
+              <Link href={'/resume'} className='bg-muted hover:bg-muted/95  rounded-xl text-xl px-6 py-4  '>
+              {translation.downloadCv}
+
+              </Link>
+            </div>
+
+           <div className='hidden'>
+           <SocialMediaList/>
+           </div>
           </motion.div>
 
           <motion.div

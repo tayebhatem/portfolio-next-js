@@ -28,13 +28,15 @@ export const homeSectionTranslation = (language: LanguageType) => {
         title: "I'm a",
         words: ["web developer", "mobile developer"],
         description: "I am a passionate and dedicated web and mobile developer, creating dynamic and user-friendly digital solutions. My expertise lies in crafting responsive websites and intuitive mobile applications that not only meet user needs but also drive business success.",
-        downloadCv: "View CV"
+        downloadCv: "Resume",
+        hireMe:'Hire me'
       },
       fr: {
         title: "Je suis un",
         words: ["développeur web", "développeur mobile"],
         description: "Je suis un développeur web et mobile passionné et dévoué, créant des solutions numériques dynamiques et conviviales. Mon expertise réside dans la création de sites web réactifs et d'applications mobiles intuitives qui répondent non seulement aux besoins des utilisateurs, mais contribuent également au succès des entreprises.",
-        downloadCv: "Voir le CV"
+        downloadCv: "CV",
+        hireMe:'Embauche moi'
       },
       
     };

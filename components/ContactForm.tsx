@@ -23,6 +23,7 @@ import { sendMail } from "@/lib/mail"
 import useLanguageStore from "@/stores/useLanguageStore"
 import axios from "axios";
 import { AlertCircle } from "lucide-react"
+import clsx from "clsx"
 const ContactForm = () => {
   const { language } = useLanguageStore()  // Get current language
   const [loading, sendMessage] = useTransition()
@@ -149,10 +150,19 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="w-full items-center gap-4 text-base capitalize text-white" disabled={loading}>
-            {send}
-            <BsSendFill />
-          </Button>
+        
+          <button type="submit" className={clsx("w-full flex flex-row  text-lg bg-primary rounded-lg px-4 py-3 hover:bg-primary/90 transition-all duration-300 items-center justify-center gap-4  capitalize text-white",loading && 'opacity-80')} disabled={loading}>
+          {
+            loading ?<div
+            className="size-8 border-4 border-t-white border-gray-300 rounded-full animate-spin"
+          ></div>:
+         <>
+          {send}
+          <BsSendFill />
+          </>
+        
+          }
+          </button>
         </form>
       </Form>
     </MotionDiv>

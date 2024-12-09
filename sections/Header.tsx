@@ -17,13 +17,20 @@ import Logo from '@/components/Logo';
 import LanguageDropdown from '@/components/custome-ui/LanguageDropdown';
 import useLanguageStore from '@/stores/useLanguageStore';
 import { headerTranslation } from '@/constants/translation';
-
+import { useWindowSize } from '@react-hook/window-size';
+import clsx from 'clsx';
+import { useScroll } from 'framer-motion';
+import { useWindowScroll } from "@uidotdev/usehooks";
 const Header = () => {
   const {language}=useLanguageStore()
   const translation=headerTranslation(language)
+  const [{ x, y }] = useWindowScroll();
+
+ 
+  
   return (
-    <header className="w-full border-b border-b-muted fixed top-0 z-50 bg-card">
-    <div className="flex   py-8 px-4 justify-between items-center max-w-screen-lg mx-auto">
+    <header className={clsx("w-full py-6  fixed top-0 z-50  transition-all duration-300", y && y>100 && 'backdrop-blur-sm bg-card/50  shadow-sm  py-2.5')}>
+    <div className="flex    px-6 lg:px-0  justify-between items-center max-w-screen-lg mx-auto">
   <Logo/>
   <Navbar/>
 

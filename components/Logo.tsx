@@ -6,11 +6,11 @@ import Link from 'next/link';
 const kanit = Kanit({ subsets:['latin'],weight:['700'] });
 const Logo = () => {
   return (
-    <Link href={'/'} className='flex flex-row items-center gap-x-2 '>
-    <FaCode className='w-8 h-8'/>
+    <Link href={'/'} className='flex flex-row items-center gap-x-2 outline-none border-none '>
+    <FaCode className='size-8'/>
     <h1
     className={cn(
-     "font-extrabold tracking-tight text-3xl text-secondary-foreground/90",
+     "font-extrabold tracking-tight text-2xl sm:text-3xl text-secondary-foreground/90",
     kanit.className
    )}>
      Dev<span className="text-primary">Tech</span></h1>
