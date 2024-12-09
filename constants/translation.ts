@@ -7,14 +7,14 @@ export const headerTranslation = (language: LanguageType) => {
       technologies: "Technologies",
       about: "About",
       projects: "Projects",
-      contact: "Contact",
+      contact: "Hire me",
     },
     fr: {
       home: "Accueil",
       technologies: "Technologies",
       about: "À propos",
       projects: "Projets",
-      contact: "Contact",
+      contact: "Embauchez moi",
     },
 
   };
@@ -154,17 +154,14 @@ export const homeSectionTranslation = (language: LanguageType) => {
     export const contactSectionTranslation = (language: LanguageType) => {
         const translations = {
           en: {
-            title: "Contact",
+            title: "Hire me",
             description: "Get in touch with me",
           },
           fr: {
-            title: "Contact",
+            title: "Embauchez moi",
             description: "Prenez contact avec moi",
           },
-          ar: {
-            title: "الاتصال",
-            description: "تواصل معي",
-          },
+         
         };
       
         return translations[language.id] || translations.en;
