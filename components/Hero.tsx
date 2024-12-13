@@ -54,9 +54,12 @@ export function Hero() {
       
 
   return (
-    <div className="relative flex   w-full h-[400px] flex-col items-center justify-center  ">
-     <img src="/assets/profile.jpg" className="object-cover rounded-full size-60  sm:size-72"/>
-      <OrbitingCircles
+    <div className="relative flex    w-full h-full sm:h-[400px] flex-col items-center justify-center  ">
+     <img src="/assets/profile.jpg" className="object-cover rounded-full size-60 border-8 border-primary  sm:size-72"/>
+      {
+        width>640 && 
+        <>
+        <OrbitingCircles
         className="size-12    border-none bg-transparent hidden sm:flex justify-center items-center"
         radius={180}
         duration={20}
@@ -85,6 +88,8 @@ export function Hero() {
       >
         <Icons.upWork />
       </OrbitingCircles>
+        </>
+      }
       
     </div>
   );

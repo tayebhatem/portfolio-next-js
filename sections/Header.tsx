@@ -40,7 +40,7 @@ const Header = () => {
 
    <Sheet >
 <SheetTrigger>
-<GiHamburgerMenu className="block md:hidden"/>
+<GiHamburgerMenu className="block md:hidden size-6 "/>
 </SheetTrigger>
 <SheetContent side={'left'}>
 <SheetHeader>

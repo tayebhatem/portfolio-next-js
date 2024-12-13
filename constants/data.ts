@@ -2,6 +2,22 @@ import { LanguageType, ProjectType, SkillType } from "@/types";
 
 export const projects: ProjectType[] = [
   {
+    slug: 'crypto-landing-page',
+    name: {
+      en: 'Crypto Landing Page',
+      fr: 'Page de destination Crypto',
+    },
+    description: {
+      en: 'This is a modern and responsive crypto landing page, built with Vite, React, Tailwind CSS, TypeScript, and enhanced with Framer Motion for smooth animations. The page showcases various cryptocurrency services, features, and user testimonials. With a clean and professional design, it includes sections for introducing the crypto platform, explaining key features, and providing user testimonials. It is fully optimized for all devices, ensuring a seamless experience across desktops, tablets, and mobile devices.',
+      fr: 'Il s\'agit d\'une page de destination crypto moderne et réactive, construite avec Vite, React, Tailwind CSS, TypeScript, et enrichie par Framer Motion pour des animations fluides. La page présente divers services de cryptomonnaie, des fonctionnalités et des témoignages d\'utilisateurs. Avec un design épuré et professionnel, elle comprend des sections pour présenter la plateforme crypto, expliquer les fonctionnalités clés et fournir des témoignages d\'utilisateurs. Elle est entièrement optimisée pour tous les appareils, garantissant une expérience fluide sur les ordinateurs de bureau, les tablettes et les appareils mobiles.',
+    },
+    thumbnail: '/assets/crypto.svg',
+    github: 'https://github.com/tayebhatem/Crypto-landing-page',
+    url: 'https://crypto-landing-page-tayebhatem.vercel.app',
+    tools: ['vite', 'react', 'tailwind', 'typescript', 'framer motion'],
+    type: 'web',
+  },
+  {
     slug: 'banking-landing-page',
     name: {
       en: 'Banking Landing Page',
@@ -14,7 +30,7 @@ export const projects: ProjectType[] = [
     thumbnail: '/assets/banking.svg',
     github: 'https://github.com/tayebhatem/Bancking-landing-page',
     url: 'https://banking-landing-page-two.vercel.app/',
-    tools: ['vite', 'tailwind', 'framer motion'],
+    tools: ['vite','react', 'tailwind', 'framer motion'],
     type: 'web',
   },
   
