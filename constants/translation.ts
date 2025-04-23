@@ -83,18 +83,25 @@ export const homeSectionTranslation = (language: LanguageType) => {
         ],
         experience: [
           {
-            title: "Freelancer on Fiverr/Upwork",
-            years: "2022-2024",
+            title: "Freelancer",
+            years: "June 2023 - December 2024",
             description:
-              "Experienced freelancer specializing in building responsive web and mobile applications. I also offer professional digital design services to create visually appealing and user-friendly interfaces. Dedicated to delivering high-quality solutions tailored to client needs.",
+              "Specialized in building responsive web and mobile apps and providing digital design services for visually appealing, user-friendly interfaces.",
           },
           {
-            title: "Computer Science Teacher",
-            years: "2023-2024",
+            title: "Full Stack Developer at Scholia",
+            years: "December 2024 – Present",
             description:
-              "Experienced computer science teacher offering courses in Python, web development (HTML, CSS, and JavaScript), and databases. Passionate about helping students grasp complex concepts and develop practical skills. Dedicated to delivering engaging and comprehensive lessons tailored to diverse learning needs.",
+              "Building a platform for students to submit admissions, upload documents, and communicate with schools using Next.js, Tailwind CSS, and Appwrite.",
           },
-        ],
+          {
+            title: "Front-End Developer at Vosyn",
+            years: "January 2025 – April 2025",
+            description:
+              "Worked on fixing bugs, developing responsive UIs with Material UI (MUI), and contributing to a video/audio player section for smooth playback and interaction.",
+          },
+        ]
+        
       },
 
       fr: {
